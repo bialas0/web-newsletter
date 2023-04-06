@@ -6,6 +6,15 @@
 #### 3. The server-side script saves the input into the database, in this case, a .json file. 
 #### 4. It has cool and responsive UI. 
 
+## 🛠️ Notes
+### This project is still under development... 
+The project offers a responsive and compact UI, with a form that takes in inputs (name, surname & email). 
+
+### I am still working on: 
+#### ➡ Handling form input via the server. 
+#### ➡ Storing submitted data in a .json file. 
+#### ➡ Refining the grid generation system  responsiveness. 
+
 ## ⚙️ How it works...
 ### Node.js packages
 #### ➡ http
@@ -61,7 +70,3 @@ Case 2 (null): On the other hand, if there is no errors present, the status code
 <img src="https://user-images.githubusercontent.com/118835576/230498231-7942b550-1fae-4557-aedc-240674911643.png" width="550">
 
 This snippet of code executes the code embedded within the 'server' function, making use of the 'listen()' method. It takes in the port number and the uses an arrow function to log and confirm which port the server is running on, in this case port number 3000. 
-
-## 🛠️ Notes
-### This project is still under development... 
-The above code is the basis for the whole project, and its purpose is to handle requests and responses, and in the example above, it showcases how it loads the DOM content of the website. I am still working on handling and storing form inputs. 
