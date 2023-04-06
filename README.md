@@ -1,4 +1,4 @@
-# node.js web-newsletter
+# node.js server-side web-newsletter
 
 ## ✨ What it does...
 #### 1. Takes name, surname, & email input. 
