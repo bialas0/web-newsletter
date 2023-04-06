@@ -62,5 +62,6 @@ Case 2 (null): On the other hand, if there is no errors present, the status code
 
 This snippet of code executes the code embedded within the 'server' function, making use of the 'listen()' method. It takes in the port number and the uses an arrow function to log and confirm which port the server is running on, in this case port number 3000. 
 
-### This is still under development... 
+## 🛠️ Notes
+### This project is still under development... 
 The above code is the basis for the whole project, and its purpose is to handle requests and responses, and in the example above, it showcases how it loads the DOM content of the website. I am still working on handling and storing form inputs. 
