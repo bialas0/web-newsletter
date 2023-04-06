@@ -36,8 +36,28 @@ The second if statement checks if the url ends with the string '.css'. If it doe
 
 By setting the 'Content-Type' header, the server ensures that the client knows how to interpret the response content. This is important as different types of content require different rendering/ processing. Without setting the 'Content-Type' header correctly, the client may not be able to render or process the content properly. 
 
-<img src="https://user-images.githubusercontent.com/118835576/230496897-24aea44b-b70e-4c80-af2d-e649589c7bb7.png" width="600">
+<img src="https://user-images.githubusercontent.com/118835576/230496897-24aea44b-b70e-4c80-af2d-e649589c7bb7.png" width="700">
 
 This constant utilises the Node.js special variable '__dirname', which specifies the current directory that the client is running through. The 'path.join()' method joins the current directory string with the 'public' and 'url' strings. All this is redirect the path to be something along the lines of: 'X:\server\public\index.html'. 
 
-<img src="https://user-images.githubusercontent.com/118835576/230497765-314e21c5-d3a9-45ab-b042-e58f36e6a594.png" width="700">
+<img src="https://user-images.githubusercontent.com/118835576/230497765-314e21c5-d3a9-45ab-b042-e58f36e6a594.png" width="800">
+
+The first argument passed to 'readFile' is the 'filePath', which is a string representing the path to the 'public' file. The second argument is a callback function that will be called once the file has been read.
+
+The callback function takes two parameters: err and data. The 'err' parameter is an object of the built-in 'NodeJS.ErrnoException' or null, which represents any error that occurred while reading the file. If there was no error, err will be null, and the execution will be successful.
+
+The 'data' parameter is a 'Buffer' object that contains the contents of the file that was read. If there was an error while reading the file, data will be undefined as it could not have been processed.
+
+The purpose behind this function is to read the file contained inside the 'filePath' constant. In this case, the server is reading the 'index.html' page file. It also incorporates error handling through the use of the Node.js built-in objects. 
+
+<img src="https://user-images.githubusercontent.com/118835576/230498105-90ed8691-0d2e-4e94-8b9f-05080310e2d0.png" width="300">
+
+The above if else statement checks for any errors of type 'ErrnoException', and if there is an error of this nature present, the reponse will be as follows: 
+
+Case 1 (err): The 'writeHead()' method will set a status code of '404', deeming the request unsuccessful. It will also set the page content to '404 Not Found' using the 'end()' method.
+
+Case 2 (null): On the other hand, if there is no errors present, the status code of '200' will be set, rendering the request successful, sending backa positive response. The 'data' parameter can now be fed into the response, loading the DOM content within the 'index.html' file. 
+
+<img src="https://user-images.githubusercontent.com/118835576/230498231-7942b550-1fae-4557-aedc-240674911643.png" width="550">
+
+This snippet of code executes the code embedded within the 'server' function, making use of the 'listen()' method. It takes in the port number and the uses an arrow function to log and confirm which port the server is running on, in this case port number 3000. 
