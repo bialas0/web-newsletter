@@ -1,5 +1,16 @@
 # node.js server-side web-newsletter
 
+## 📜 Index
+#### 📷 Screenshots        (gui screenshots)
+#### ✨ What it does...    (features)
+#### 🛠️ Notes              (developments)
+#### ⚙️ How it works...    (src code)
+
+## 📷 Screenshots
+### Desktop & Mobile
+<img src="https://user-images.githubusercontent.com/118835576/230505043-c5c31b93-e343-45e6-970c-e24e0bf43426.png" width="1000">
+<img src="https://user-images.githubusercontent.com/118835576/230505071-de576730-947e-4099-bf0a-77b7bd8e6ec9.png" width="300">
+
 ## ✨ What it does...
 #### 1. Takes name, surname, & email input. 
 #### 2. Creates a server request that handles the form input. 
