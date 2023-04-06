@@ -1,0 +1,20 @@
+{
+  "name": "nodejs-server",
+  "version": "1.0.0",
+  "description": "A node.js server handling email input via web forms. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "bialas",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "typescript": "^5.0.3"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "path": "^0.12.7"
+  }
+}
