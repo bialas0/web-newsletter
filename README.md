@@ -28,7 +28,7 @@ The project offers a responsive and compact UI, with a form that takes in inputs
 
 ### I am still working on: 
 #### ➡ Handling form input via the server. 
-#### ➡ Storing submitted data in a .json file. 
+#### ➡ Storing multiple data objects in the .json file (presetting [] and proper writing). 
 #### ➡ Refining the grid generation system  responsiveness. 
 
 ## ⚙️ How it works...
