@@ -33,9 +33,14 @@ The project offers a responsive and compact UI, with a form that takes in inputs
 
 ## ⚙️ How it works...
 ### Node.js packages
-#### ➡ http
-#### ➡ fs
-#### ➡ path
+#### ➡ Required
+* http
+* fs
+* path
+#### ➡ Recommended
+* typescript compiler (allows the usage of .ts files)
+* nodemon (easy localhost hosting with automated reload)
+
 ### Server-side code
 ![src](https://user-images.githubusercontent.com/118835576/230492974-80bba694-6b4d-4761-b656-11756618b90b.png)
 ### Code Explained
