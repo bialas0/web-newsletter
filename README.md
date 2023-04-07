@@ -1,11 +1,16 @@
-# node.js server-side web-newsletter
+# ✉️ node.js server-side web-newsletter ✉️
 
 ## 📜 Index
-#### 📷 Screenshots        (gui screenshots)
-#### ✨ What it does...    (features)
-#### 🛠️ Notes              (developments)
-#### ⚙️ How it works...    (src code)
-
+* 📷 Screenshots
+  * Desktop GUI
+  * Mobile GUI
+* ✨ What it does...
+* 🛠️ Notes
+* ⚙️ How it works...
+  * Server-side code
+  * Form-handling code
+  * Grid generation code
+  
 ## 📷 Screenshots
 ### Desktop & Mobile
 <img src="https://user-images.githubusercontent.com/118835576/230505043-c5c31b93-e343-45e6-970c-e24e0bf43426.png" width="1000">
@@ -76,8 +81,10 @@ The above if else statement checks for any errors of type 'ErrnoException', and 
 
 Case 1 (err): The 'writeHead()' method will set a status code of '404', deeming the request unsuccessful. It will also set the page content to '404 Not Found' using the 'end()' method.
 
-Case 2 (null): On the other hand, if there is no errors present, the status code of '200' will be set, rendering the request successful, sending backa positive response. The 'data' parameter can now be fed into the response, loading the DOM content within the 'index.html' file. 
+Case 2 (null): On the other hand, if there is no errors present, the status code of '200' will be set, rendering the request successful, sending back a positive response. The 'data' parameter can now be fed into the response, loading the DOM content within the 'index.html' file. 
 
 <img src="https://user-images.githubusercontent.com/118835576/230498231-7942b550-1fae-4557-aedc-240674911643.png" width="550">
 
 This snippet of code executes the code embedded within the 'server' function, making use of the 'listen()' method. It takes in the port number and the uses an arrow function to log and confirm which port the server is running on, in this case port number 3000. 
+
+### Form-handling code
