@@ -32,7 +32,10 @@ function generateTileGrid() {
     const tiles = container.querySelectorAll('.tile');
     
     tiles.forEach(tile => {
-      tile.setAttribute('style', `width: ${tileTotalWidth}px; height: ${tileTotalHeight}px; margin: ${tileSpacing / 2}px`);
+      tile.setAttribute('style', `
+      width: ${tileTotalWidth}px; 
+      height: ${tileTotalHeight}px; 
+      margin: ${tileSpacing / 2}px`);
     });
 
     tiles.forEach(tile => {
@@ -84,3 +87,13 @@ document.addEventListener('mousemove', (e: MouseEvent) => {
     bg.style.background = `radial-gradient(circle at ${x}px ${y}px, #e94141, #000000)`;
   }, delay);
 });
+
+function returnBtn() {
+  const btn = document.querySelector('.return-btn') as HTMLButtonElement;
+
+  btn.addEventListener('click', () => {
+    window.history.back();
+  });
+}
+
+returnBtn();

@@ -16,7 +16,6 @@ function generateTileGrid() {
     var numRows = Math.floor(vh / 100);
     var container = document.querySelector('.tile-container');
     if (container) {
-        // Remove existing tiles
         container.innerHTML = '';
         for (var i = 0; i < numRows * numCols; i++) {
             var tile = document.createElement('div');
@@ -30,9 +29,8 @@ function generateTileGrid() {
         var tileTotalHeight_1 = tileHeight - tileSpacing_1;
         var tiles_1 = container.querySelectorAll('.tile');
         tiles_1.forEach(function (tile) {
-            tile.setAttribute('style', "width: ".concat(tileTotalWidth_1, "px; height: ").concat(tileTotalHeight_1, "px; margin: ").concat(tileSpacing_1 / 2, "px"));
+            tile.setAttribute('style', "\n      width: ".concat(tileTotalWidth_1, "px; \n      height: ").concat(tileTotalHeight_1, "px; \n      margin: ").concat(tileSpacing_1 / 2, "px"));
         });
-        // Add hover effect
         tiles_1.forEach(function (tile) {
             tile.addEventListener('mouseenter', function () {
                 tile.classList.add('glow', 'highlight');
@@ -40,19 +38,15 @@ function generateTileGrid() {
                 var row = Math.floor(index / numCols);
                 var col = index % numCols;
                 if (row > 0) {
-                    // Tile above
                     tiles_1[index - numCols].classList.add('glow', 'highlight');
                 }
                 if (row < numRows - 1) {
-                    // Tile below
                     tiles_1[index + numCols].classList.add('glow', 'highlight');
                 }
                 if (col > 0) {
-                    // Tile to the left
                     tiles_1[index - 1].classList.add('glow', 'highlight');
                 }
                 if (col < numCols - 1) {
-                    // Tile to the right
                     tiles_1[index + 1].classList.add('glow', 'highlight');
                 }
             });
@@ -78,3 +72,10 @@ document.addEventListener('mousemove', function (e) {
         bg.style.background = "radial-gradient(circle at ".concat(x, "px ").concat(y, "px, #e94141, #000000)");
     }, delay);
 });
+function returnBtn() {
+    var btn = document.querySelector('.return-btn');
+    btn.addEventListener('click', function () {
+        window.history.back();
+    });
+}
+returnBtn();
