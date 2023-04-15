@@ -31,6 +31,13 @@ const server: http.Server = http.createServer((req: http.IncomingMessage, res: h
       }
 
       const filePath: string = path.join(__dirname, 'user_data.json');
+      let fileContent = fs.readFileSync(filePath, 'utf8');
+      if (fileContent[0] != '[') {
+        fs.writeFileSync(filePath, '[' + `[${JSON.stringify(formDataObj)}]`);
+      } else {
+        fs.writeFileSync(filePath, fileContent.replace(']','') 
+        + ',' + JSON.stringify(formDataObj) + ']');
+      }
       fs.appendFile(filePath, '\n' + JSON.stringify(formDataObj) + '\n', (err) => {
         if (err) {
           res.writeHead(500);

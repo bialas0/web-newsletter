@@ -26,6 +26,14 @@ var server = http.createServer(function (req, res) {
                 email: formData.get('email')
             };
             var filePath = path.join(__dirname, 'user_data.json');
+            var fileContent = fs.readFileSync(filePath, 'utf8');
+            if (fileContent[0] != '[') {
+                fs.writeFileSync(filePath, '[' + "[".concat(JSON.stringify(formDataObj), "]"));
+            }
+            else {
+                fs.writeFileSync(filePath, fileContent.replace(']', '')
+                    + ',' + JSON.stringify(formDataObj) + ']');
+            }
             fs.appendFile(filePath, '\n' + JSON.stringify(formDataObj) + '\n', function (err) {
                 if (err) {
                     res.writeHead(500);
